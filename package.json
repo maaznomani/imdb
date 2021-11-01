@@ -1,0 +1,41 @@
+{
+  "name": "ProShop",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Maaz Nomani",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "http://maaznomani.github.io/imdb",
+  "scripts": {
+    "start": "npm start --prefix frontend",
+    "start1": "node backend/server",
+    "build": "react-scripts build",
+    "server": "nodemon backend/server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "inspect": "concurrently \"npm --inspect server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mdb-ui-kit": "^3.9.0",
+    "mdbreact": "^5.1.0",
+    "mongoose": "^5.12.12",
+    "ngrok": "^4.0.1",
+    "razorpay": "^2.0.6",
+    "react-scripts": "^4.0.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "gh-pages": "^3.2.3",
+    "nodemon": "^2.0.7"
+  }
+}
